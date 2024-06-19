@@ -5,13 +5,15 @@
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 1px;
   background: #00e1ff;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 20px;
+  width: 100%;
 }
 
 body {
@@ -24,29 +26,50 @@ body {
   height: 80vh;
   justify-content: space-between;
   display: flex;
+  flex-direction: column;
 }
 
-.left,
-.right {
-  width: 40%;
+.top,
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
+}
+
+.box {
+  width: 33.1%;
+  height: 50vh;
+  font-size: 18px;
+
 }
 
 textarea {
   width: 100%;
-  height: 27%;
-  background: #1f1f1f;
-  color: #fff;
-  padding: 10px 20px;
-  border: 0;
-  outline: 0;
-  font-size: 18px;
-  resize: none;
+  height: 100%;
+
+}
+
+.CodeMirror {
+  width: 100%;
+  height: 94%;
+}
+
+.CodeMirror-hints {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10000;
+  max-height: 50%;
+  overflow-y: auto;
+  background-color: #c2c2c2;
+
 }
 
 iframe {
   width: 100%;
-  height: 100%;
+  height: 50vh;
   border: 0;
   outline: 0;
   background: #fff;
@@ -62,4 +85,14 @@ label {
   align-items: center;
   background-color: #000;
   height: 30px;
+}
+
+#run {
+  display: none;
+  width: 200px;
+  padding: 20px;
+  background-color: #00e1ff;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
 }

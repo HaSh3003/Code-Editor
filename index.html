@@ -6,66 +6,92 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/07598355df.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css"
+    integrity="sha512-6sALqOPMrNSc+1p5xOhPwGIzs6kIlST+9oGWlI4Wwcbj1saaX9J3uzO3Vub016dmHV7hM+bMi/rfXLiF5DNIZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"
+    integrity="sha512-w8mdbtlkBpU0p/dbFb4Oa1Hfd5k2mvOX82w0FnArHOPB28Ixai1Uj68X/3aK+/+35zNbTzBf9OfuSG+XTwnwCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"
+    integrity="sha512-DJ/Flq7rxJDDhgkO49H/rmidX44jmxWot/ku3c+XXEF9XFal78KIpu7w6jEaQhK4jli1U3/yOH+Rp3cIIEYFPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css">
+  <!-- Ayu-dark Theme CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/theme/ayu-dark.min.css">
+  <!-- Hint CSS for Auto Complete -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/show-hint.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+  <!-- CodeMirror Modes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js"></script>
+  <!-- Hint JavaScript for Auto Complete -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/css-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/javascript-hint.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Code Editor</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="left">
-      <Label><i class="fa-brands fa-html5"></i>Html</Label>
-      <textarea id="Html-code" onkeyup="run()">
-        <h1>Welcome To My Code Editor</h1>
+    <div class="top">
+      <div class="box">
+        <Label><i class="fa-brands fa-html5"></i>Html</Label>
+        <textarea id="Html-code" onkeyup="run()">
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
 
-        <h1 id='Btn'>Click Here</h1>
-        
+              <title>My Page</title>
+
+          </head>
+          <body>
+              <h1>
+            Welcome To My Code Editor
+            </h1>
+
+          </body>
+          </html>
+
+
       </textarea>
+      </div>
 
-      <Label><i class="fa-brands fa-css3-alt"></i>Css</Label>
-      <textarea id="Css-code" onkeyup="run()">
-        h1 { 
+
+      <div class="box">
+        <Label><i class="fa-brands fa-css3-alt"></i>Css</Label>
+        <textarea id="Css-code" onkeyup="run()">
+        h1 {
            color : #fff;
            text-align : center;
            font-size : 30px;
            background : #000;
            border-radius: 12px;
         }
-        #Btn { 
-           width : 100%;
-           height : 40px;
-           outline : none;
-           border :none;
-           background : #000;
-           color: white;
-           font-size:20px;
-           border-radius:13px;
-           cursor : pointer;
-           display : flex;
-           justify-content : center;
-           align-items:center
-        }
+
       </textarea>
-
-      <Label><i class="fa-brands fa-js"></i>JavaScript</Label>
-      <textarea id="Js-code" onkeyup="run()">
-        let btn = document.getElementById("Btn")
-
-        btn.onclick= function() {
-
-        btn.style.backgroundColor = "Green"
-        btn.innerHTML = "Success";
-
-        };
+      </div>
+      <div class="box">
+        <Label><i class="fa-brands fa-js"></i>JavaScript</Label>
+        <textarea id="Js-code" onkeyup="run()">
+console.log("Hello")
       </textarea>
+      </div>
     </div>
-
-    <div class="right">
+    <button accesskey="c" id="run" onclick="run()">Run</button>
+    <div class="buttom">
       <label><i class="fa-solid fa-play"></i>output</label>
       <iframe id='output'></iframe>
     </div>
 
   </div>
   <script src='script.js'></script>
+
 </body>
 
 </html>
