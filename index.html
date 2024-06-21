@@ -86,7 +86,17 @@ console.log("Hello")
     <button accesskey="c" id="run" onclick="run()">Run</button>
     <div class="buttom">
       <label><i class="fa-solid fa-play"></i>output</label>
-      <iframe id='output'></iframe>
+      <div class='Devices_Emulator'>
+        <label>Width</label>
+        <input onkeyup='Devices_Emulator();' type='number' id='width' placeholder="Width">
+        <label>Height</label>
+        <input onkeyup="Devices_Emulator();" type='number' id='height' placeholder="Height">
+
+      </div>
+  <div class='output'>
+    <iframe id='output'>
+
+    </iframe>
     </div>
 
   </div>
