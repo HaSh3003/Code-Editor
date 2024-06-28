@@ -9,7 +9,7 @@ function run() {
 }
 
 let HtmlEditor = CodeMirror.fromTextArea(document.getElementById("Html-code"), {
-  mode: "htmlmixed",
+  name: "htmlmixed",
   theme: "ayu-dark",
   lineWrapping: true,
   lineNumbers: true,
