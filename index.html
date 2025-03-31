@@ -34,7 +34,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/css-hint.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/addon/hint/javascript-hint.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <title>Code Editor</title>
+  <title>Perfecto.Dev Code Editor</title>
 </head>
 
 <body>
@@ -43,20 +43,30 @@
       <div class="box">
         <Label><i class="fa-brands fa-html5"></i>Html</Label>
         <textarea id="Html-code" onkeyup="run()">
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
+        <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Perfecto.Dev Code Editor</title>
+    </style>
+</head>
+<body>
+    <div class="welcome-box">
+        <h2>Welcome to this exceptional project! 🚀✨</h2>
+        <p>Where creativity meets code, allowing you to experiment and bring your ideas to life effortlessly. Enjoy a seamless, smart, and lightning-fast coding experience! 💡💻
+Welcome to a world where code comes alive! 🎨⚡
 
-              <title>My Page</title>
 
-          </head>
-          <body>
-              <h1>
-            Welcome To My Code Editor
-            </h1>
 
-          </body>
-          </html>
+
+
+
+
+</p>
+    </div>
+</body>
+</html>
 
 
       </textarea>
@@ -66,12 +76,30 @@
       <div class="box">
         <Label><i class="fa-brands fa-css3-alt"></i>Css</Label>
         <textarea id="Css-code" onkeyup="run()">
-        h1 {
-           color : #fff;
-           text-align : center;
-           font-size : 30px;
-           background : #000;
-           border-radius: 12px;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-box {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        .welcome-box h2 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .welcome-box p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
         }
 
       </textarea>
